@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	var request ="";
+		function getAjax(){
+ 	var div = document.getElementById("div");
+			request= new XMLHttpRequest();
+			request.open('GET', 'beast.txt');
+	request.send(null);
+	//request.onreadystatechange = checkData;
+	div.innerHTML = "ABC";
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+		
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+	
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+		
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+		
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+		
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+		
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+		
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+	
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+		
+	div.innerHTML += "ABC1";
+	div.innerHTML += "ABC2";
+	div.innerHTML += "ABC3";
+	div.innerHTML += "ABC4";
+	div.innerHTML += "AB5";
+	//alert(request.readyState);
+setInterval(function(){ 	if (request.status == 200){
+//we got a response
+
+	alert(request.responseText);
+} else {
+//something went wrong
+
+alert(request.readyState);
+}  }, 0.0000000000000000000000000000000000000000000000000001);
+
+/*	if (request.status == 200){
+//we got a response
+
+	alert(request.responseText);
+} else {
+//something went wrong
+
+alert('Error- ' + request.status + ': ' + request.statusText);
+} // end if*/
+} // end function
+		function checkData(){
+			alert(request.readyState)
+		}
+	</script>
+</head>
+<body><div id="div"></div>
+<input type="button" id="btn" onclick="getAjax()" name="" value = "click me">
+</body>
+</html>

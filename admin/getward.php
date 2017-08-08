@@ -1,0 +1,17 @@
+<?php  
+    include("../connection.php");
+    if(isset($_POST["id"])){
+    	$id = $_POST["id"];
+    	$sqlDict = "SELECT * FROM ward WHERE districtid='$id '";
+    	$result = mysqli_query($conn, $sqlDict);
+    }
+?>
+
+<option value="">--Chon Phuong/Xa/Ban--</option>
+<?php  
+	while($row = mysqli_fetch_assoc($result)) {
+?>
+	<option value="<?php echo $row["wardid"] ?>"><?php echo $row["name"] ?></option>
+<?php			
+	}
+?>

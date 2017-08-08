@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+			div.content{
+				border: solid;
+				width: 300px
+			}
+	</style>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+			$(init);
+			var countAdd = 0;
+			var idClone = 0;
+			function init(){
+				
+				$('#add').click(add);
+				$('#clone').click(clone);
+				$('#change').click(change);
+			}
+			function add(){
+				countAdd = countAdd+1;
+				var textToAdd = $('#content1').html()+" You have add a content and this is "+countAdd+" time";
+				$('#content1').html(textToAdd);
+			}
+			function clone(){
+				idClone = idClone +1;
+				var textToAdd = "<div id=\"content" +idClone+"\"" +">" + $('#content1').html() +"</div>"; 
+				//alert(textToAdd);
+				$('#content1').after(textToAdd);
+			}
+			function change(){
+				var divFind;
+				for(i=0;i<$('div').length;i++){
+					if(i%2 == 0){
+						divFind = "#content" +i;
+						$(divFind).css("background-color","yellow");
+					}
+				}
+			}	
+	</script>
+</head>
+<body>
+ <input type="button" name="" value="Add" id="add">
+ <input type="button" name="" value="Clone" id="clone">
+  <input type="button" name="" value="Wrap" id="wrap">
+   <input type="button" name="" value="Change" id="change">
+    <input type="button" name="" value="Reset" id="reset">
+    <div class="content" id="content1">This is my content</div>
+</body>
+</html>

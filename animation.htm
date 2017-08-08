@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			display: inline;
+			float: left;
+		}
+		div #button{
+			width: 30%;
+		}
+		 #content {
+				 
+			 
+/*background-color: black;
+width: 50px;*/
+			height: 200px;
+			
+		}
+		div #abc{
+
+		}
+		div p {
+			width: 300px;
+			height: 0%;
+			background-color: black;
+			position: absolute;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(init);
+		var top;
+		function init(){
+			$("#show").click(show);
+			$("#hide").click(hide);
+			$("#toggle").click(toggle);
+		//	$('p').hide();
+		$("#down").click(down);
+		$("#up").click(up);
+		$("#right").click(right);
+		$("#move").click(move);
+		}
+		function move(){
+			//alert();
+			$('p').animate({
+				"right": 'toggle'
+			},6000);
+		}
+		function show(){
+			$('p').show();
+		}
+		function hide(){
+			$('p').hide();
+		}
+		function toggle(){
+			$('p').toggle();
+		}
+		function down(){
+			$('p').slideDown('medium');	
+			
+		}
+		function up(){
+			//$('p').slideUp('medium');	
+			var myVar = setInterval(function(){
+
+			var element = document.getElementById('test'),
+    	style = window.getComputedStyle(element),
+   	 	top = style.getPropertyValue('height');
+   	 	top = parseInt(top);
+				top = top + 20;
+				value = top + "px";
+   	 		//	alert(value);
+   	 		element.style.height = value;
+   	 		if(top > 200){
+   	 			 clearInterval(myVar);
+   	 		}
+			}, 50);
+			//setDown();
+			
+		}
+		function right(){
+			$('#test').css('left', '+=10');
+		}
+		function setDown(){
+			var element = document.getElementById('test'),
+    	style = window.getComputedStyle(element),
+   	 	top = style.getPropertyValue('height');
+   	 	top = parseInt(top);
+   	// 	var n = top.indexOf("px");
+   	 		top = top + 20;
+   	 		//alert(top);
+
+   	 	while(top<=200){
+   	 	
+   	 		value = top + "px"
+   	 		//	alert(value);
+   	 		element.style.height = value
+   	 		top = top + 20
+   	 		
+   	 	}
+   	 	//alert(top);
+		}
+	</script>
+</head>
+<body>
+<div id="button">
+	<input type="button" name="" value="show" id="show"><br>
+	<input type="button" name="" value="hide" id="hide"><br>
+	<input type="button" name="" value="Toggle" id="toggle"><br>
+	<input type="button" name="" value="Slide Down" id="down"><br>
+	<input type="button" name="" value="Slide Up" id="up"><br>
+	<input type="button" name="" value="Fade in" id="in"><br>
+	<input type="button" name="" value="Fade Out" id="out"><br>
+	<input type="button" name="" value="To Right" id="right"><br>
+	<input type="button" name="" value="Click to move" id="move"><br>
+</div>
+<div id="content">
+	<p id="test">This is my content at first, please show it please show it please show it please show it please show it
+	This is my content at first, please show it1111111111111111111</p>
+	
+</div>
+</body>
+</html>
