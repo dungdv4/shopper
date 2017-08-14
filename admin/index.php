@@ -10,7 +10,7 @@
         if(isset($_COOKIE['user'])){
             $_SESSION['user'] = $_COOKIE['user'];
             $_SESSION['isLoggin'] = "TRUE";
-            die("abc");
+            //die("abc");
             header("location:../index.php");
         }
         else{
@@ -45,7 +45,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
-
+    <link href="dist/css/myCSS.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

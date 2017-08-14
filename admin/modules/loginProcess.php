@@ -21,7 +21,7 @@ $sqlCheckLogin = "SELECT * FROM user WHERE email = '$inputEmail' AND password = 
 		{
 $cookie_name = 'user';
 $cookie_value = serialize($data);
-setcookie($cookie_name, $cookie_value, time() + 86400); // 86400 = 1 day
+setcookie($cookie_name, $cookie_value, time() + 86400, '/'); // 86400 = 1 day
 /*	if(isset($_COOKIE[$cookie_name])){
 	   // $cookie = $_COOKIE['cookie'];
 	    die("Dung");

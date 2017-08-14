@@ -53,8 +53,11 @@
                         <input class="form-control" type="text" name="userName" id="userName" placeholder="Nhap userName" value="<?php echo $userName; ?>"/>
                     </div>
                     <div class="form-group">
+                    <div id="image_preview"><img id="previewing" src="noimage.png" /></div>
                         <label>Avata</label>
-                        <input type="file" name="avata" id="avata" />
+                        <input type="file" name="file" id="file" />
+                        <div id="message"></div>
+                        <p id="myPara" name="myPara"></p>
                     </div>
                     <?php  
                         if(!isset($_GET["uid"])){
